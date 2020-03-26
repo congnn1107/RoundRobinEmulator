@@ -1,0 +1,53 @@
+/**
+*Bài Tập Nhóm: Mô phỏng giải thuật Round-Robin
+*Nhóm sinh viên:
+*Nguyễn Ngọc Công - 611213
+*Đặng Hồng Nhung - 611248
+*Tô Thị Thủy - 611311
+*/
+#intro{
+	width:500px;
+	height:200px;
+}
+
+#ketqua{
+	min-height:350px;
+}
+input{
+	height:30px;
+	font-size:20px;
+}
+h2 {
+	color: tomato;
+}
+h4{
+	color: blue;
+}
+
+table {
+	border-collapse:collapse;
+}
+table,th,td,tr{
+	padding: 5px;
+	text-align:center;
+	border: 1px solid black;
+}
+th {
+	background:gray;
+	color: white;
+	font-weight:bold;
+}
+#grantt{
+	overflow:scroll;
+}
+#gantt tr td{
+	width: 50px;
+}
+#gantt tr:last-child td{
+	text-align:left;
+}
+#btnreset{
+	width:200px;
+	height:50px;
+	font-size:30px;
+}
