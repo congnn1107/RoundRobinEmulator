@@ -17,17 +17,36 @@ function getData(){
 		let content= reader.result.split('\n');
 		let pn = content[0].split(' ');
 		data.push(pn);
-		let bt=content[1].split(' ').map(Number);
+		let bt=content[1].split(' ').map((x)=>parseInt(x));
+		//console.log("sum bt: "+sumArr(bt));
+		//kiểm tra phát hiện lỗi
+		if(isNaN(sumArr(bt))){
+			alert("File không đúng định dạng, vui lòng kiểm tra lại a!");
+			return;
+		}
 		data.push(bt);
+		let at=[];
 		if(content.length>2){
-			let at = content[2].split(' ').map(Number);
+			at = content[2].split(' ').map((x)=>parseInt(x));
+			//kiểm tra phát hiện lỗi
+			if(isNaN(sumArr(at)) || bt.length != at.length  || at.length!=pn.length){
+				alert("File không đúng định dạng, vui lòng kiểm tra lại b!");
+				return;
+			}
 			data.push(at);
+		}
+		//kiểm tra phát hiện lỗi
+		if(content.length>3  || bt.length != pn.length){
+			alert("File không đúng định dạng, vui lòng kiểm tra lại c!");
+			return;
 		}
 		
 		//thực thi tính toán lấy kết quả
 		var res = RoundRobin();
 		//xuất kết quả ra giao diện
-		ExportResult(res);
+		if(res!=false){
+			ExportResult(res);
+		}
 	};
 	reader.readAsText(fileinput.files[0]);
 }

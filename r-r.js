@@ -18,6 +18,10 @@ function RoundRobin(){
 	var pArrivalTime=[0,0,0,0];
 	if(data.length>2) pArrivalTime=data[2];
 	var quantum= parseInt(document.getElementById("q").value);
+	if (quantum<=0){
+		alert("Không chấp nhận giá trị âm!");
+		return false;
+	}
 
 	var Time = 0;
 	var logPName=[];

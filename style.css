@@ -38,10 +38,10 @@ th {
 	font-weight:bold;
 }
 #grantt{
-	overflow:scroll;
+	overflow:scroll; 
 }
 #gantt tr td{
-	width: 50px;
+	width: 100px;
 }
 #gantt tr:last-child td{
 	text-align:left;
