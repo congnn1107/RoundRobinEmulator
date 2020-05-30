@@ -18,8 +18,8 @@ function RoundRobin(){
 	var pArrivalTime=[0,0,0,0];
 	if(data.length>2) pArrivalTime=data[2];
 	var quantum= parseInt(document.getElementById("q").value);
-	if (quantum<=0){
-		alert("Không chấp nhận giá trị âm!");
+	if (quantum<=0 || isNaN(quantum)){
+		alert("Không chấp nhận giá trị không hợp lệ!");
 		return false;
 	}
 

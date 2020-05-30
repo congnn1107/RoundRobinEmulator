@@ -27,7 +27,7 @@ h4{
 table {
 	border-collapse:collapse;
 }
-table,th,td,tr{
+table tr, table td, table td{
 	padding: 5px;
 	text-align:center;
 	border: 1px solid black;
@@ -45,6 +45,14 @@ th {
 }
 #gantt tr:last-child td{
 	text-align:left;
+}
+#gantt tr:last-child{
+	border:none;
+}
+#gantt tr:last-child td:last-child{
+	border-top:none;
+	border-bottom:none;
+	border-right:none;
 }
 #btnreset{
 	width:200px;

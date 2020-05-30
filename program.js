@@ -16,8 +16,10 @@ function getData(){
 	reader.onload = function(e){
 		let content= reader.result.split('\n');
 		let pn = content[0].split(' ');
+		pn.shift();
 		data.push(pn);
 		let bt=content[1].split(' ').map((x)=>parseInt(x));
+		bt.shift();
 		//console.log("sum bt: "+sumArr(bt));
 		//kiểm tra phát hiện lỗi
 		if(isNaN(sumArr(bt))){
@@ -28,6 +30,7 @@ function getData(){
 		let at=[];
 		if(content.length>2){
 			at = content[2].split(' ').map((x)=>parseInt(x));
+			at.shift();
 			//kiểm tra phát hiện lỗi
 			if(isNaN(sumArr(at)) || bt.length != at.length  || at.length!=pn.length){
 				alert("File không đúng định dạng, vui lòng kiểm tra lại b!");
